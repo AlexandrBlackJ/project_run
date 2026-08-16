@@ -24,6 +24,5 @@ from app_run.views import home_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('api/', include('app_run.urls'))
-    path('api/company_details', home_view)
+    path('api/company_details/', home_view)
 ]
