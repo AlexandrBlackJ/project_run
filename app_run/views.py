@@ -23,3 +23,4 @@ class AccountViewSet(viewsets.ModelViewSet):
     """ViewSet для работы с моделью Run"""
     queryset = Run.objects.all()
     serializer_class = Run_Serializers
+
