@@ -24,5 +24,5 @@ from app_run.views import home_view, AccountViewSet
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/company_details/', home_view),
-    path('api/runs/', AccountViewSet.as_view({'post': 'list'}))
+    path('api/runs/', AccountViewSet.as_view({'get': 'list'}))
 ]
