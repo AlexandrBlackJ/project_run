@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import viewsets
 from django.conf import settings
 from .models import Run
-from .serializer import Run_Serializers
+from .serializer import RunSerializer
 
 
 @api_view(['GET'])
@@ -19,8 +19,6 @@ def home_view(request):
     return Response(contacts)
 
 
-class AccountViewSet(viewsets.ModelViewSet):
-    """ViewSet для работы с моделью Run"""
+class RunViewSet(viewsets.ModelViewSet):
     queryset = Run.objects.all()
-    serializer_class = Run_Serializers
-
+    serializer_class = RunSerializer
