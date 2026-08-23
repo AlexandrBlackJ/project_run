@@ -20,5 +20,6 @@ def home_view(request):
 
 
 class RunViewSet(viewsets.ModelViewSet):
+    """ViewSet для работы url 'api/runs', обрабатывает данные из модели Run"""
     queryset = Run.objects.all()
     serializer_class = RunSerializer

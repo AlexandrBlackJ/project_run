@@ -25,6 +25,7 @@ from app_run.views import RunViewSet
 
 router = DefaultRouter()
 router.register('api/runs', RunViewSet)
+router.register('api/users', UserView)
 
 
 urlpatterns = [
