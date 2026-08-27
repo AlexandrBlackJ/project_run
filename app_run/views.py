@@ -35,10 +35,11 @@ class UserView(viewsets.ReadOnlyModelViewSet):
         """Фильтрация пользователей по ролям. Исключение админов из ответа"""
         query = User.objects.filter(is_superuser=False)
 
-        stuff = self.request.query_params.get('is_staff')
-        if stuff == 'true':
+        # stuff = self.request.query_params.get('is_staff')
+        type = self.request.query_params.get('type')
+        if type == 'coach':
             query = query.filter(is_staff=True)
-        else:
+        elif type == 'athlete':
             query = query.filter(is_staff=False)
         return query
 
