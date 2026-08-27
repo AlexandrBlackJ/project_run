@@ -21,7 +21,8 @@ from django.conf import settings
 from rest_framework.routers import DefaultRouter
 
 from app_run.views import home_view
-from app_run.views import RunViewSet
+from app_run.views import RunViewSet, UserView
+
 
 router = DefaultRouter()
 router.register('api/runs', RunViewSet)
